@@ -19,6 +19,8 @@ namespace EmployeeManagement
         {
             _listBoxEmployee.Items.Clear();
             _listBoxEmployee.Items.AddRange(_items.Where(e => e.Address.IndexOf(_textBoxSearch.Text) != -1).ToArray());
+            int count = _listBoxEmployee.Items.Count;
+            MessageBox.Show(count == 0 ? "見つかりませんでした。" : string.Format("{0}件ヒットしました。", count));
         }
     }
 }

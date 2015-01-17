@@ -1,5 +1,8 @@
-﻿namespace EmployeeManagement
+﻿using System;
+
+namespace EmployeeManagement
 {
+    [Serializable]
     public class EmployeeData
     {
         public string Name { get; set; }
